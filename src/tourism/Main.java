@@ -197,16 +197,37 @@ public static void main(String[] args) {
 
         graph.dijkstra(source - 1);
         
-        System.out.println("\n=================================");
-        System.out.println("      BOOKING CONFIRMED");
-        System.out.println("=================================");
+        System.out.println("\n========================================");
+        System.out.println("          BOOKING CONFIRMED");
+        System.out.println("========================================");
 
-        System.out.println("Travel ID : " + travelId);
-        System.out.println("Tourist   : " + name);
-        System.out.println("Category  : " + category);
+        System.out.printf("%-15s : %s%n", "Travel ID", travelId);
+        System.out.printf("%-15s : %s%n", "Tourist", name);
+        System.out.printf("%-15s : %s%n", "Category", category);
 
-        System.out.println("\nThank you for choosing YatraSphere!");
+        System.out.println("========================================");
+
+        System.out.println("Thank you for choosing YatraSphere!");
         System.out.println("Have a safe journey.");
+        
+        Hotel[] hotels = {
+        		new Hotel("Taj Residency", 4500, 4.8),
+        		new Hotel("Green Park", 3000, 4.5),
+        		new Hotel("Budget Inn", 1800, 4.0),
+        		new Hotel("Luxury Stay", 6000, 4.9)
+        		};
+
+        		MergeSort sorter = new MergeSort();
+
+        		sorter.sortByRating(hotels, 0, hotels.length - 1);
+
+        		System.out.println("\n===== HOTEL RECOMMENDATIONS =====");
+
+        		for (Hotel hotel : hotels) {
+        		System.out.println(hotel);
+        		
+
+        		}
 
 
     } else {

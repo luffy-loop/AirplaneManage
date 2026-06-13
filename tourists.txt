@@ -33,3 +33,19 @@ Phone : 2298776654
 Budget : 30000.0
 Category : Beach
 ----------------------------------
+Travel ID : YT101
+Name : Hansika
+Age : 19
+Gender : Female
+Phone : 3928499988
+Budget : 700000.0
+Category : Historical
+----------------------------------
+Travel ID : YT101
+Name : varun
+Age : 22
+Gender : Male
+Phone : 7689044444
+Budget : 230000.0
+Category : Nature
+----------------------------------
