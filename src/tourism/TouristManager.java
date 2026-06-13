@@ -27,8 +27,6 @@ public class TouristManager {
 
             writer.close();
 
-            System.out.println("\nTourist Registered Successfully!");
-            System.out.println("Travel ID: " + tourist.getTravelId());
 
         } catch (IOException e) {
             System.out.println("Error saving tourist data.");

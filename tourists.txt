@@ -9,3 +9,11 @@ Phone : 9949383838
 Budget : 20000.0
 Category : Nature
 ----------------------------------
+Travel ID : YT101
+Name : Arjun
+Age : 19
+Gender : Male
+Phone : 9999988888
+Budget : 30000.0
+Category : Adventure
+----------------------------------

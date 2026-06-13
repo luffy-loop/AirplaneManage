@@ -13,17 +13,15 @@ public static void main(String[] args) {
     String name;
 
     while (true) {
-    System.out.print("Enter Name: ");
-    name = sc.nextLine().trim();
+        System.out.print("Enter Name: ");
+        name = sc.nextLine().trim();
 
-    if (name.matches("[a-zA-Z ]+")) {
-        break;
-    } else {
-        System.out.println("Invalid Name! Name should contain only letters.");
+        if (name.matches("[a-zA-Z ]+")) {
+            break;
+        } else {
+            System.out.println("Invalid Name! Name should contain only letters.");
+        }
     }
-
-    }
-
 
     int age;
 
@@ -50,34 +48,30 @@ public static void main(String[] args) {
     String gender;
 
     while (true) {
-    System.out.print("Enter Gender (M/F/O): ");
-    gender = sc.nextLine().trim();
 
-    if (gender.equalsIgnoreCase("M")
-            || gender.equalsIgnoreCase("Male")) {
+        System.out.print("Enter Gender (M/F/O): ");
+        gender = sc.nextLine().trim();
 
-        gender = "Male";
-        break;
+        if (gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("Male")) {
 
-    } else if (gender.equalsIgnoreCase("F")
-            || gender.equalsIgnoreCase("Female")) {
+            gender = "Male";
+            break;
 
-        gender = "Female";
-        break;
+        } else if (gender.equalsIgnoreCase("F") || gender.equalsIgnoreCase("Female")) {
 
-    } else if (gender.equalsIgnoreCase("O")
-            || gender.equalsIgnoreCase("Other")) {
+            gender = "Female";
+            break;
 
-        gender = "Other";
-        break;
+        } else if (gender.equalsIgnoreCase("O") || gender.equalsIgnoreCase("Other")) {
 
-    } else {
+            gender = "Other";
+            break;
 
-        System.out.println("Invalid Gender! Enter M, F or O.");
+        } else {
+
+            System.out.println("Invalid Gender! Enter M, F or O.");
+        }
     }
-
-    }
-
 
     String phone;
 
@@ -101,7 +95,8 @@ public static void main(String[] args) {
 
         try {
 
-            budget = Double.parseDouble(sc.nextLine());
+        	String budgetInput = sc.nextLine().replace(",", "");
+        	budget = Double.parseDouble(budgetInput);
 
             if (budget > 0) {
                 break;
@@ -156,7 +151,7 @@ public static void main(String[] args) {
                     break;
 
                 default:
-                    System.out.println("Invalid Choice! Select between 1 and 5.");
+                    System.out.println("Invalid Choice!");
                     continue;
             }
 
@@ -164,7 +159,7 @@ public static void main(String[] args) {
 
         } catch (NumberFormatException e) {
 
-            System.out.println("Invalid Input! Enter numbers only.");
+            System.out.println("Invalid Input!");
         }
     }
 
@@ -189,43 +184,6 @@ public static void main(String[] args) {
     System.out.println("Travel ID : " + travelId);
     System.out.println("Name      : " + name);
     System.out.println("Category  : " + category);
-
-    System.out.println("\n=================================");
-    System.out.println(" Available Destinations ");
-    System.out.println("=================================");
-
-    switch (category) {
-
-        case "Nature":
-            System.out.println("AR101 - Araku Valley");
-            System.out.println("AR102 - Lambasingi");
-            System.out.println("AR103 - Munnar");
-            break;
-
-        case "Adventure":
-            System.out.println("AD101 - Borra Caves");
-            System.out.println("AD102 - Rishikesh");
-            System.out.println("AD103 - Manali");
-            break;
-
-        case "Historical":
-            System.out.println("HI101 - Charminar");
-            System.out.println("HI102 - Golconda Fort");
-            System.out.println("HI103 - Hampi");
-            break;
-
-        case "Religious":
-            System.out.println("RE101 - Tirupati");
-            System.out.println("RE102 - Varanasi");
-            System.out.println("RE103 - Srisailam");
-            break;
-
-        case "Beach":
-            System.out.println("BE101 - RK Beach");
-            System.out.println("BE102 - Goa");
-            System.out.println("BE103 - Kovalam");
-            break;
-    }
 
     sc.close();
 }
