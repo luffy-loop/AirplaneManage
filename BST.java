@@ -34,4 +34,36 @@ public class BST {
 
         return root;
     }
+
+    public TouristPlace search(int id) {
+        return searchRec(root, id);
+    }
+
+    private TouristPlace searchRec(BSTNode root, int id) {
+        if (root == null) {
+            return null;
+        }
+
+        if (root.place.getId() == id) {
+            return root.place;
+        }
+
+        if (id < root.place.getId()) {
+            return searchRec(root.left, id);
+        }
+
+        return searchRec(root.right, id);
+    }
+
+    public void displayAll() {
+        inorder(root);
+    }
+
+    private void inorder(BSTNode root) {
+        if (root != null) {
+            inorder(root.left);
+            root.place.display();
+            inorder(root.right);
+        }
+    }
 }
