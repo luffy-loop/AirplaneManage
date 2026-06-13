@@ -7,6 +7,11 @@ public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
     TouristManager manager = new TouristManager();
+    
+    Graph graph = new Graph();
+
+    graph.dijkstra(0);
+
 
     System.out.println("========== YatraSphere ==========");
 
