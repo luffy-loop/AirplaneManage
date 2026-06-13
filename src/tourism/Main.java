@@ -118,6 +118,7 @@ public static void main(String[] args) {
 
     int choice;
     String category = "";
+    String destination = "";
 
     while (true) {
 
@@ -161,7 +162,63 @@ public static void main(String[] args) {
             System.out.println("Invalid Input!");
         }
     }
+    DestinationManager dm = new DestinationManager();
 
+    dm.displayCategoryDestinations(category);
+
+    int destinationChoice;
+
+    while (true) {
+
+        try {
+
+            System.out.print("Select Destination (1-3): ");
+            destinationChoice = Integer.parseInt(sc.nextLine());
+
+            if (destinationChoice >= 1 && destinationChoice <= 3) {
+                break;
+            }
+
+            System.out.println("Invalid Choice!");
+
+        } catch (NumberFormatException e) {
+
+            System.out.println("Enter numbers only.");
+        }
+    }
+
+    switch (category) {
+
+        case "Nature":
+            destination = (destinationChoice == 1) ? "Araku Valley"
+                    : (destinationChoice == 2) ? "Lambasingi"
+                    : "Munnar";
+            break;
+
+        case "Adventure":
+            destination = (destinationChoice == 1) ? "Borra Caves"
+                    : (destinationChoice == 2) ? "Rishikesh"
+                    : "Manali";
+            break;
+
+        case "Historical":
+            destination = (destinationChoice == 1) ? "Charminar"
+                    : (destinationChoice == 2) ? "Golconda Fort"
+                    : "Hampi";
+            break;
+
+        case "Religious":
+            destination = (destinationChoice == 1) ? "Tirupati"
+                    : (destinationChoice == 2) ? "Varanasi"
+                    : "Srisailam";
+            break;
+
+        case "Beach":
+            destination = (destinationChoice == 1) ? "Goa"
+                    : (destinationChoice == 2) ? "RK Beach"
+                    : "Kovalam";
+            break;
+    }
     String travelId = manager.generateTravelId();
 
     Tourist tourist = new Tourist(
@@ -183,6 +240,7 @@ public static void main(String[] args) {
     System.out.println("Travel ID : " + travelId);
     System.out.println("Name      : " + name);
     System.out.println("Category  : " + category);
+    System.out.println("Destination  : " + destination);
     
     Graph graph = new Graph();
 
@@ -204,11 +262,13 @@ public static void main(String[] args) {
         System.out.printf("%-15s : %s%n", "Travel ID", travelId);
         System.out.printf("%-15s : %s%n", "Tourist", name);
         System.out.printf("%-15s : %s%n", "Category", category);
+        System.out.printf("%-15s : %s%n", "Destination", destination);
 
         System.out.println("========================================");
 
         System.out.println("Thank you for choosing YatraSphere!");
         System.out.println("Have a safe journey.");
+
         
         Hotel[] hotels = {
         		new Hotel("Taj Residency", 4500, 4.8),
@@ -228,6 +288,14 @@ public static void main(String[] args) {
         		
 
         		}
+        		
+        BudgetOptimizer optimizer =
+        				new BudgetOptimizer();
+
+        				optimizer.optimizeBudget(
+        				(int) budget
+        				);
+
 
 
     } else {

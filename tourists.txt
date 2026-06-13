@@ -49,3 +49,19 @@ Phone : 7689044444
 Budget : 230000.0
 Category : Nature
 ----------------------------------
+Travel ID : YT101
+Name : arav
+Age : 19
+Gender : Male
+Phone : 9939776581
+Budget : 8000.0
+Category : Beach
+----------------------------------
+Travel ID : YT101
+Name : Vamshika
+Age : 19
+Gender : Female
+Phone : 9949888876
+Budget : 30000.0
+Category : Historical
+----------------------------------
