@@ -7,12 +7,6 @@ public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
     TouristManager manager = new TouristManager();
-    
-    Graph graph = new Graph();
-
-    graph.dijkstra(0);
-
-
     System.out.println("========== YatraSphere ==========");
 
     String name;
@@ -189,6 +183,41 @@ public static void main(String[] args) {
     System.out.println("Travel ID : " + travelId);
     System.out.println("Name      : " + name);
     System.out.println("Category  : " + category);
+    
+    Graph graph = new Graph();
+
+    graph.displayCities();
+
+    System.out.print("\nSelect Source City (1-5): ");
+
+    try {
+    int source = Integer.parseInt(sc.nextLine());
+
+    if (source >= 1 && source <= 5) {
+
+        graph.dijkstra(source - 1);
+        
+        System.out.println("\n=================================");
+        System.out.println("      BOOKING CONFIRMED");
+        System.out.println("=================================");
+
+        System.out.println("Travel ID : " + travelId);
+        System.out.println("Tourist   : " + name);
+        System.out.println("Category  : " + category);
+
+        System.out.println("\nThank you for choosing YatraSphere!");
+        System.out.println("Have a safe journey.");
+
+
+    } else {
+
+        System.out.println("Invalid City Choice!");
+    }
+    } catch (NumberFormatException e) {
+    System.out.println("Enter numbers only.");
+
+    }
+
 
     sc.close();
 }

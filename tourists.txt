@@ -25,3 +25,11 @@ Phone : 3984775589
 Budget : 20000.0
 Category : Adventure
 ----------------------------------
+Travel ID : YT101
+Name : arjun
+Age : 19
+Gender : Male
+Phone : 2298776654
+Budget : 30000.0
+Category : Beach
+----------------------------------
