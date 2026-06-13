@@ -65,3 +65,19 @@ Phone : 9949888876
 Budget : 30000.0
 Category : Historical
 ----------------------------------
+Travel ID : YT101
+Name : praso
+Age : 29
+Gender : Female
+Phone : 9949886754
+Budget : 80000.0
+Category : Religious
+----------------------------------
+Travel ID : YT101
+Name : lakshmi
+Age : 21
+Gender : Female
+Phone : 2287336512
+Budget : 399920.0
+Category : Nature
+----------------------------------

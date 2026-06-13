@@ -29,7 +29,7 @@ public double getRating() {
 public String toString() {
 
     return String.format(
-        "%-15s | Price: ₹%-8.0f | Rating: %.1f",
+        "%-22s | ₹%-6.0f | %.1f Stars",
         name,
         price,
         rating

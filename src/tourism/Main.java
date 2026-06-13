@@ -6,6 +6,7 @@ public class Main {
 public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
+    boolean running = true;
     TouristManager manager = new TouristManager();
     System.out.println("========== YatraSphere ==========");
 
@@ -253,8 +254,61 @@ public static void main(String[] args) {
 
     if (source >= 1 && source <= 5) {
 
-        graph.dijkstra(source - 1);
-        
+    	String sourceCity = "";
+
+    	switch(source) {
+
+    	    case 1:
+    	        sourceCity = "Hyderabad";
+    	        break;
+
+    	    case 2:
+    	        sourceCity = "Vizag";
+    	        break;
+
+    	    case 3:
+    	        sourceCity = "Araku Valley";
+    	        break;
+
+    	    case 4:
+    	        sourceCity = "Vijayawada";
+    	        break;
+
+    	    case 5:
+    	        sourceCity = "Warangal";
+    	        break;
+    	}
+
+    	System.out.println("\n========================================");
+    	System.out.println("           ROUTE DETAILS");
+    	System.out.println("========================================");
+
+    	System.out.printf("%-18s : %s%n", "Source City", sourceCity);
+    	System.out.printf("%-18s : %s%n", "Destination", destination);
+
+    	int distance = 0;
+
+    	if(destination.equals("Tirupati"))
+    	    distance = 560;
+    	else if(destination.equals("Varanasi"))
+    	    distance = 1400;
+    	else if(destination.equals("Srisailam"))
+    	    distance = 220;
+    	else if(destination.equals("Goa"))
+    	    distance = 620;
+    	else if(destination.equals("Hampi"))
+    	    distance = 380;
+    	else if(destination.equals("Charminar"))
+    	    distance = 15;
+    	else
+    	    distance = 300;
+
+    	System.out.printf("%-18s : %d KM%n",
+    	        "Distance", distance);
+
+    	System.out.printf("%-18s : %d Hours%n",
+    	        "Travel Time", distance / 60);
+    	
         System.out.println("\n========================================");
         System.out.println("          BOOKING CONFIRMED");
         System.out.println("========================================");
@@ -270,12 +324,48 @@ public static void main(String[] args) {
         System.out.println("Have a safe journey.");
 
         
-        Hotel[] hotels = {
-        		new Hotel("Taj Residency", 4500, 4.8),
-        		new Hotel("Green Park", 3000, 4.5),
-        		new Hotel("Budget Inn", 1800, 4.0),
-        		new Hotel("Luxury Stay", 6000, 4.9)
-        		};
+        Hotel[] hotels;
+
+        if (destination.equals("Goa")) {
+
+            hotels = new Hotel[] {
+                new Hotel("Goa Beach Resort", 6000, 4.9),
+                new Hotel("Sea View Goa", 4500, 4.8),
+                new Hotel("Budget Goa Stay", 2500, 4.5)
+            };
+
+        } else if (destination.equals("Hampi")) {
+
+            hotels = new Hotel[] {
+                new Hotel("Hampi Heritage Resort", 4500, 4.9),
+                new Hotel("Royal Hampi Stay", 3500, 4.7),
+                new Hotel("Budget Hampi Inn", 2200, 4.4)
+            };
+
+        } else if (destination.equals("Charminar")) {
+
+            hotels = new Hotel[] {
+                new Hotel("Hyderabad Grand", 5000, 4.8),
+                new Hotel("Nizam Residency", 3500, 4.6),
+                new Hotel("Budget Hyderabad Inn", 2000, 4.3)
+            };
+
+        } else if (destination.equals("Tirupati")) {
+
+            hotels = new Hotel[] {
+                new Hotel("Tirupati Residency", 3000, 4.8),
+                new Hotel("Balaji Comforts", 2500, 4.6),
+                new Hotel("Temple View Inn", 1800, 4.4)
+            };
+
+        } else {
+
+            hotels = new Hotel[] {
+                new Hotel("Luxury Stay", 6000, 4.9),
+                new Hotel("Taj Residency", 4500, 4.8),
+                new Hotel("Budget Inn", 1800, 4.0)
+            };
+        }
 
         		MergeSort sorter = new MergeSort();
 
