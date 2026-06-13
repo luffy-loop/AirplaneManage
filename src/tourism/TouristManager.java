@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class TouristManager {
 
-    private static int nextId = 101;
-
+	private static int nextId = loadLastId();
+	
     public String generateTravelId() {
         return "YT" + nextId++;
     }
@@ -32,4 +32,50 @@ public class TouristManager {
             System.out.println("Error saving tourist data.");
         }
     }
+    
+    private static int loadLastId() {
+    	try {
+
+    	    java.io.File file =
+    	            new java.io.File("tourists.txt");
+
+    	    if (!file.exists()) {
+    	        return 101;
+    	    }
+
+    	    java.io.BufferedReader reader =
+    	            new java.io.BufferedReader(
+    	                    new java.io.FileReader(file));
+
+    	    String line;
+    	    int lastId = 100;
+
+    	    while ((line = reader.readLine()) != null) {
+
+    	        if (line.startsWith("Travel ID")) {
+
+    	            String id =
+    	                    line.split(":")[1].trim();
+
+    	            int number =
+    	                    Integer.parseInt(
+    	                            id.replace("YT", "")
+    	                    );
+
+    	            lastId = number;
+    	        }
+    	    }
+
+    	    reader.close();
+
+    	    return lastId + 1;
+
+    	} catch (Exception e) {
+
+    	    return 101;
+    	}
+   
+
+    	}
+
 }

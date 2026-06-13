@@ -6,7 +6,6 @@ public class Main {
 public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
-    boolean running = true;
     TouristManager manager = new TouristManager();
     System.out.println("========== YatraSphere ==========");
 
@@ -386,7 +385,17 @@ public static void main(String[] args) {
         				(int) budget
         				);
 
+        				TouristSearch search =
+        				        new TouristSearch();
 
+        				System.out.print(
+        				        "\nEnter Travel ID to Search: "
+        				);
+
+        				String searchId =
+        				        sc.nextLine();
+
+        				search.searchTourist(searchId);
 
     } else {
 

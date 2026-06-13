@@ -1,83 +1,16 @@
-YS101,Hanshitha,Goa,7000.0
-YS102,Dhruv,Jaipur,12000.0
-YS103,Lakshmi,Delhi,5000.0
 Travel ID : YT101
-Name : Arjun
-Age : 19
-Gender : Male
-Phone : 9949383838
-Budget : 20000.0
-Category : Nature
-----------------------------------
-Travel ID : YT101
-Name : Arjun
-Age : 19
-Gender : Male
-Phone : 9999988888
-Budget : 30000.0
-Category : Adventure
-----------------------------------
-Travel ID : YT101
-Name : arjun
-Age : 29
-Gender : Male
-Phone : 3984775589
-Budget : 20000.0
-Category : Adventure
-----------------------------------
-Travel ID : YT101
-Name : arjun
-Age : 19
-Gender : Male
-Phone : 2298776654
-Budget : 30000.0
-Category : Beach
-----------------------------------
-Travel ID : YT101
-Name : Hansika
-Age : 19
-Gender : Female
-Phone : 3928499988
-Budget : 700000.0
-Category : Historical
-----------------------------------
-Travel ID : YT101
-Name : varun
-Age : 22
-Gender : Male
-Phone : 7689044444
-Budget : 230000.0
-Category : Nature
-----------------------------------
-Travel ID : YT101
-Name : arav
-Age : 19
-Gender : Male
-Phone : 9939776581
-Budget : 8000.0
-Category : Beach
-----------------------------------
-Travel ID : YT101
-Name : Vamshika
-Age : 19
-Gender : Female
-Phone : 9949888876
-Budget : 30000.0
-Category : Historical
-----------------------------------
-Travel ID : YT101
-Name : praso
-Age : 29
-Gender : Female
-Phone : 9949886754
-Budget : 80000.0
-Category : Religious
-----------------------------------
-Travel ID : YT101
-Name : lakshmi
+Name : jay
 Age : 21
-Gender : Female
-Phone : 2287336512
-Budget : 399920.0
-Category : Nature
+Gender : Male
+Phone : 9949777707
+Budget : 20000.0
+Category : Adventure
+----------------------------------
+Travel ID : YT102
+Name : arun
+Age : 19
+Gender : Male
+Phone : 9949777788
+Budget : 30000.0
+Category : Adventure
 ----------------------------------
