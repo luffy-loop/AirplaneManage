@@ -14,3 +14,19 @@ Phone : 9949777788
 Budget : 30000.0
 Category : Adventure
 ----------------------------------
+Travel ID : YT103
+Name : arun
+Age : 18
+Gender : Male
+Phone : 9949887635
+Budget : 30000.0
+Category : Historical
+----------------------------------
+Travel ID : YT104
+Name : tharun
+Age : 33
+Gender : Male
+Phone : 8848399932
+Budget : 3394845.0
+Category : Adventure
+----------------------------------
